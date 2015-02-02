@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Settings</title>
+    <link href="assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="assets/js/foundation.js"></script>
+    <script src="assets/js/routes.js"></script>
+    <script src="assets/js/app.js"></script>
+    <style>
+      .menu-bar {margin-bottom: 0;}
+      .feeds {padding-top:1rem;}
+#upload-file-container {
+background: url(./images/input.png) no-repeat;
+height: 140px;
+background-size: 100%;
+overflow: hidden
+}
+
+#upload-file-container input {
+   filter: alpha(opacity=0);
+   opacity: 0;
+   height:140px;
+}
+    </style>
+  </head>
+  <body>
+  <div class="grid-block small-up-1 medium-up-2 large-up-3" style="margin-top:10px;">
+    <div class="small-6 grid-content can-hide">
+      <div id="upload-file-container">
+         <input type="file" name="photo" />
+      </div>
+    </div>
+    <div class="small-6 grid-content can-hide">
+          <h1 class="user-name">John Smith</h1>
+    </div>
+  </div>
+    <div class="grid-frame">
+      <div id="info" class="small-horizontal grid-block">
+        <div ng-class="['ui-animation']" ui-view class="grid-block small-order-2">
+
+        </div>
+        <div class="grid-block shrink small-order-1">
+          <ul class="small-vertical icon-top small-condense menu-bar dark">
+            <li ui-sref-active="is-active"><a ui-sref="account-settings"><img zf-iconic="" data-src="assets/img/iconic/person.svg"></a></li>
+            <li ui-sref-active="is-active"><a ui-sref="order-history"><i class="fa fa-list"></i></a></li>
+            <li ui-sref-active="is-active"><a ui-sref="user-details"><i class="fa fa-mobile" style="font-size:27px;"></i></a></li>
+            <li ui-sref-active="is-active"><a ui-sref="wishlist"><img zf-iconic="" data-src="assets/img/iconic/document.svg"><span class="alert badge">7</span></a></li>
+            <li ui-sref-active="is-active"><a ui-sref="email-signup"><i class="fa fa-envelope"></i></a></li>
+            <li ui-sref-active="is-active"><a ui-sref="app-settings"><img zf-iconic="" data-src="assets/img/iconic/cog.svg"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
